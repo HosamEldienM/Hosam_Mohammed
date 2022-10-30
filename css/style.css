@@ -679,9 +679,7 @@ html {
   .aside-menu{
     transform: translateY(70%);
   }
-  .aside-menu .element{
-    justify-content: start;
-  }
+ 
 }
 .aside-menu .element {
   width: 40px;
