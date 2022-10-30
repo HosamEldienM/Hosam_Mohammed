@@ -679,6 +679,9 @@ html {
   .aside-menu{
     transform: translateY(70%);
   }
+  .aside-menu .element{
+    justify-content: start;
+  }
 }
 .aside-menu .element {
   width: 40px;
@@ -693,6 +696,14 @@ html {
   cursor: pointer;
   overflow: hidden;
   transition: width 0.3s;
+}
+@media (max-width: 1000px){
+  .aside-menu{
+    transform: translateY(70%);
+  }
+  .aside-menu .element{
+    justify-content: start;
+  }
 }
 .aside-menu .element.active {
   background-color: var(--main-color);
