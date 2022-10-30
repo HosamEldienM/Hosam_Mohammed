@@ -103,19 +103,21 @@ html {
   flex-direction: column;
   align-items: center;
   display: none;
+  text-align: center;
 }
 
 .general.active {
   display: flex;
 }
-@media (max-width: 1000px){
-  .general{
+@media (max-width:1000px){
+  .display-area .general{
     margin-top: 50px;
     margin-bottom: 20px;
     align-items: center;
     width: 100%;
   }
 }
+
 .display-area .general h1 {
   font-size: 50px;
   color: var(--main-color);
@@ -128,6 +130,7 @@ html {
   font-weight: bold;
   text-transform: uppercase;
 }
+
 .display-area .general .brief {
   color: var(--sec-color);
   margin-top: 40px;
@@ -193,9 +196,24 @@ html {
 .about.active {
   display: block;
 }
+.about h3{
+    text-align: center;
+  }
+@media (max-width:1000px){
+  .about{
+    margin-top: 50px;
+    height: auto;
+  }
+  
+}
 .double-title {
   position: relative;
   text-align: center;
+}
+@media (max-width:1000px){
+  .double-title{
+    margin-top: 10px;
+  }
 }
 .double-title .back-title {
   color: hsla(0, 0%, 100%, 0.07);
@@ -204,6 +222,7 @@ html {
   letter-spacing: 10px;
   line-height: 0.7;
   text-transform: uppercase;
+  text-align: center;
 }
 .double-title .front-title {
   font-size: 58px;
@@ -215,6 +234,17 @@ html {
   text-transform: uppercase;
   transform: translate(-50%, -50%);
   white-space: nowrap;
+}
+@media (max-width:1000px){
+  .double-title .back-title {
+       font-size: 46px;
+    line-height: 56px;
+  }
+  .double-title .front-title {
+     font-size: 30px;
+    line-height: 56px;
+  transform: translate(-53%, -50%);
+  }
 }
 .double-title .front-title span {
   color: var(--main-color);
@@ -239,6 +269,15 @@ html {
 }
 .personal-info .container p span {
   color: var(--sec-color);
+}
+@media (max-width:1000px){
+  .personal-info .container p {
+    width:50%;
+  }
+  .personal-info .container p span{
+        font-size: 14px;
+    white-space: nowrap;
+  }
 }
 .personal-info .container p .avail {
   color: var(--main-color);
@@ -304,7 +343,7 @@ html {
   flex-wrap: wrap;
 }
 .about .records .record {
-  width: 200px;
+  width: 190px;
   border: 0.5px solid var(--sec-color);
   border-radius: 5px;
   padding: 20px;
@@ -345,7 +384,7 @@ html {
 }
 .about .my-skills .line {
   background-color: #7c7979;
-  transform: translateX(50%);
+  transform: translateX(52%);
   max-width: 50%;
   height: 1px;
 }
@@ -372,7 +411,13 @@ html {
   box-shadow: 4px 4px 5px 0px #00000055, 3px 3px 6px #34323288,
     inset 2px -2px 20px #38363699, inset -5px -5px 20px #00000055;
 }
-
+@media (max-width:1000px){
+  .about .my-skills .skills span{
+    font-size: 9px;
+    margin: 6px;
+    padding: 10px 10px;
+  }
+}
 .about .exp {
   margin-top: 50px;
   margin-left: 20px;
@@ -411,10 +456,19 @@ html {
   padding: 5px 10px;
   background-color: rgb(63 61 61);
 }
+
 .about .exp .exp-component .job-title {
   color: var(--sec-color);
   margin-top: 15px;
   font-size: 18px;
+}
+@media (max-width: 1000px){
+  .about .exp .exp-component .date {
+  font-size: 10px;
+  }
+  .about .exp .exp-component .job-title{
+    font-size: 16px;
+  }
 }
 .about .exp .exp-component .job-title span {
   opacity: 0.8;
@@ -436,15 +490,31 @@ html {
 .portfolio.active {
   display: block;
 }
+@media (max-width: 1000px){
+  .portfolio{
+    margin-top: 50px;
+    height: auto;
+  }
+  .portfolio .back-title{
+        font-size: 65px;
+  }
+}
 .mySwiper {
   margin-top: 50px;
-  /* width: 640px; */
+  
 }
 .swiper {
-  width: 300px;
+  width: 60%;
   height: 340px;
 }
+@media (max-width:350px){
+  .swiper{
+    width: 70%;
+  }
+  .mySwiper{
 
+  }
+}
 .swiper-slide {
   display: flex;
   align-items: center;
@@ -480,6 +550,12 @@ html {
   border-radius: 10px;
   padding: 20px;
   z-index: 1001;
+  width: 50%;
+}
+@media (max-width:1000px){
+.popup-box{
+  width: 80%;
+}
 }
 .popup-box div {
   width: 100%;
@@ -494,6 +570,7 @@ html {
 .popup-box .languages {
   color: white;
   font-size: 14px;
+  overflow-wrap: anywhere;
 }
 .popup-box .preview a {
   color: var(--main-color);
@@ -533,7 +610,14 @@ html {
 .contact.active {
   display: block;
 }
-
+@media (max-width:350px){
+  .contact .back-title{
+    font-size: 40px;
+  }
+  .contact .front-title{
+    font-size: 27px;
+  }
+}
 .contact h3{
   color: var(--sec-color);
   font-size: 25px;
@@ -561,6 +645,11 @@ html {
 .contact .contact-element .mail-title{
   color: var(--sec-color);
   margin-top: 5px;
+}
+@media (max-width: 450px){
+  .contact .contact-element .mail-title{
+    font-size: 12px;
+  }
 }
 .contact .social{
   color: var(--sec-color);

@@ -36,7 +36,7 @@ function aboutMe() {
   this.classList.add("active");
 }
 
-
+//swiper 
 var swiper = new Swiper(".mySwiper", {
   effect: "cards",
   grabCursor: true,
@@ -44,10 +44,12 @@ var swiper = new Swiper(".mySwiper", {
 
 // select popup elements 
 let popup = document.querySelector(".popup-back");
-let popupTitle = document.querySelector(".popup-box div");
+let popupBox = document.querySelector(".popup-box");
+let popupContent = document.querySelector(".popup-box div");
 let popupImg = document.querySelector(".popup-back img");
 let popupClose = document.querySelector(".close-button");
 
+// console.log(popupBox)
 // select gallery images and add the event
 let ourGallery = document.querySelectorAll(".swiper-slide img");
 let re = /(https?:\/\/)?(\w*\.)+com\/\w|\W\w{4}/g;
@@ -56,8 +58,8 @@ ourGallery.forEach((img) => {
   img.addEventListener("click", function (e) {
     let link = e.target.getAttribute('data-link');
     popup.style.display = "block";
-    console.log(e.target);
-    popupTitle.innerHTML = `<h3>${e.target.alt}</h3>
+   
+    popupContent.innerHTML = `<h3>${e.target.alt}</h3>
    <p class="preview">Preview: <a href="${e.target.getAttribute('data-link')}" target="_blank">${link.match(re).join()}</a> </p>
         <p class="languages">Languages: ${e.target.getAttribute("data-lang")}</p> 
          <img src="${e.target.src}" />`;
@@ -67,5 +69,9 @@ ourGallery.forEach((img) => {
 
 // close popup
 popupClose.addEventListener("click", () => {
+    popup.style.display = "none";
+})
+
+popup.addEventListener("click", (ev) => {
     popup.style.display = "none";
 })
